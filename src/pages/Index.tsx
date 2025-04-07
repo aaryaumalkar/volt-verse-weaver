@@ -1,12 +1,19 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import React from 'react';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
+import PoemGenerator from '@/components/PoemGenerator';
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen flex flex-col px-4 sm:px-6 pb-10">
+      <Header />
+      
+      <main className="flex-grow w-full max-w-4xl mx-auto py-6">
+        <PoemGenerator />
+      </main>
+      
+      <Footer />
     </div>
   );
 };

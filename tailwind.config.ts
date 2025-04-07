@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,7 +62,13 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				// Custom colors for Verse of the Volt
+				'volt-blue': '#B8E1FF',
+				'volt-mint': '#98D9C2',
+				'volt-yellow': '#F9F7C9',
+				'volt-gray': '#F3F3F3',
+				'volt-navy': '#2A324B',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,11 +91,44 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'flicker': {
+					'0%, 100%': {
+						opacity: '1'
+					},
+					'50%': {
+						opacity: '0.7'
+					},
+				},
+				'rotate-slow': {
+					from: {
+						transform: 'rotate(0deg)'
+					},
+					to: {
+						transform: 'rotate(360deg)'
+					}
+				},
+				'fade-in': {
+					from: {
+						opacity: '0',
+						transform: 'translateY(10px)'
+					},
+					to: {
+						opacity: '1',
+						transform: 'translateY(0)'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'flicker': 'flicker 2s infinite ease-in-out',
+				'rotate-slow': 'rotate-slow 12s linear infinite',
+				'fade-in': 'fade-in 0.6s ease-out forwards'
+			},
+			fontFamily: {
+				'mono': ['"Space Mono"', 'monospace'],
+				'sans': ['"Inter"', 'sans-serif'],
 			}
 		}
 	},
